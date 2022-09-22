@@ -8,7 +8,7 @@
 using namespace std;
 
 int main() {
-  string sInputBaseFilePath = "ppms/";
+  string sInputBaseFile = "ppms/";
   stacker s1;
   string sImage;
   string sOutputFile;
@@ -20,11 +20,11 @@ int main() {
   cout << "Stacking images:\n";
   
   for (int i = 1; i <= num; i++) {
-    stringstream ssFilePath;
-    ssFilePath << sInputBaseFilePath << sImage << "/" << sImage;
-    ssFilePath << "_" << setfill('0') << setw(3) << right << i << ".ppm";
-    cout << "\t" << ssFilePath.str() << endl;
-    s1.addImage(ssFilePath.str());
+    stringstream ssFile;
+    ssFile << sInputBaseFile << sImage << "/" << sImage;
+    ssFile << "_" << setfill('0') << setw(3) << right << i << ".ppm";
+    cout << "\t" << ssFile.str() << endl;
+    s1.addImage(ssFile.str());
   }
   cout << endl;
   s1.stack();

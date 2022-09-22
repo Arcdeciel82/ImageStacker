@@ -17,10 +17,10 @@ cPPMImage::cPPMImage()
 
 cPPMImage::cPPMImage(const std::string& sPathToFile) : cPPMImage()
 {
-  ReadFromFile(sPathToFile);
+  readFromFile(sPathToFile);
 }
 
-void cPPMImage::ReadFromFile(const std::string& sPathToFile)
+void cPPMImage::readFromFile(const std::string& sPathToFile)
 {
   // initialize the input stream and some temp variables to make things easier to read
   ifstream file;
@@ -48,7 +48,7 @@ void cPPMImage::ReadFromFile(const std::string& sPathToFile)
   file.close();
 }
 
-void cPPMImage::WriteToFile(const std::string& sPathToFile)
+void cPPMImage::writeToFile(const std::string& sPathToFile)
 {
   //initialize file stream, counter helps us place the newline after each column... or row... however you wanna look at it.
   ofstream file;
@@ -81,7 +81,7 @@ strPixel cPPMImage::at(int x, int y) const
   return vecData[y*iWidth + x];
 }
 
-void cPPMImage::CreateImage(int width, int height, std::string magicNum, int maxColorValue)
+void cPPMImage::createImage(int width, int height, std::string magicNum, int maxColorValue)
 {
   iWidth = width;
   iHeight = height;
@@ -93,12 +93,12 @@ void cPPMImage::CreateImage(int width, int height, std::string magicNum, int max
   }
 }
 
-int cPPMImage::width() const
+int cPPMImage::getWidth() const
 {
   return iWidth;
 }
 
-int cPPMImage::height() const
+int cPPMImage::getHeight() const
 {
     return iHeight;
 }

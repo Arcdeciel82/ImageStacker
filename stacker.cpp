@@ -26,7 +26,7 @@ cPPMImage stacker::getOutput()
 
 void stacker::writeToFile(std::string sPathToFile)
 {
-  output.WriteToFile(sPathToFile);
+  output.writeToFile(sPathToFile);
 }
 
 void stacker::stack()
@@ -36,11 +36,11 @@ void stacker::stack()
     return;
   }
   // create an output images based on the first image's dimensions
-  output.CreateImage(images.front().width(), images.front().height());
+  output.createImage(images.front().getWidth(), images.front().getHeight());
   
   // Average the individual rgb values at each pixel.
-  for(int x = 0; x < output.width(); x++) {
-    for (int y = 0; y < output.height(); y++) {
+  for(int x = 0; x < output.getWidth(); x++) {
+    for (int y = 0; y < output.getHeight(); y++) {
       // Probably could use a fancy operator overload or a 3dvector to clean this up
       // ints to collect each pixels rgb values
       int r = 0;
