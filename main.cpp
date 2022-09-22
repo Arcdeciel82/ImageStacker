@@ -7,16 +7,16 @@ using namespace std;
 
 int main() {
   string sInputPaths[] = {
-    "ppms/ppms/cone_nebula/cone_nebula_001.ppm", 
-    "ppms/ppms/cone_nebula/cone_nebula_002.ppm", 
-    "ppms/ppms/cone_nebula/cone_nebula_003.ppm", 
-    "ppms/ppms/cone_nebula/cone_nebula_004.ppm", 
-    "ppms/ppms/cone_nebula/cone_nebula_005.ppm", 
-    "ppms/ppms/cone_nebula/cone_nebula_006.ppm", 
-    "ppms/ppms/cone_nebula/cone_nebula_007.ppm", 
-    "ppms/ppms/cone_nebula/cone_nebula_008.ppm", 
-    "ppms/ppms/cone_nebula/cone_nebula_009.ppm", 
-    "ppms/ppms/cone_nebula/cone_nebula_010.ppm", 
+    "ppms/cone_nebula/cone_nebula_001.ppm", 
+    "ppms/cone_nebula/cone_nebula_002.ppm", 
+    "ppms/cone_nebula/cone_nebula_003.ppm", 
+    "ppms/cone_nebula/cone_nebula_004.ppm", 
+    "ppms/cone_nebula/cone_nebula_005.ppm", 
+    "ppms/cone_nebula/cone_nebula_006.ppm", 
+    "ppms/cone_nebula/cone_nebula_007.ppm", 
+    "ppms/cone_nebula/cone_nebula_008.ppm", 
+    "ppms/cone_nebula/cone_nebula_009.ppm", 
+    "ppms/cone_nebula/cone_nebula_010.ppm", 
   };
   
   stacker s1;
