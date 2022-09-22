@@ -8,13 +8,13 @@ all: $(TARGET)
 $(TARGET): main.o stacker.o ppm.o
 	$(CC) $(CFLAGS) -o $(TARGET) main.o stacker.o ppm.o
 
-stacker.o: stacker.h stacker.cpp
+stacker.o: ppm.h stacker.h stacker.cpp
 	$(CC) $(CFLAGS) -c stacker.cpp
 
 ppm.o: ppm.h ppm.cpp
 	$(CC) $(CFLAGS) -c ppm.cpp
 
-main.o: main.cpp
+main.o: main.cpp stacker.h
 	$(CC) $(CFLAGS) -c main.cpp
 
 clean:
