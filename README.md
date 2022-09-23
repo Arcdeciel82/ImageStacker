@@ -9,6 +9,12 @@ It was a fairly simple process to denoise these images.
 Simply read in all the pixel data from all 10 images, 
 then average the color values of each pixel together and output a new image.
 
+# Getting Started
+
+Stacker uses the included cPPMImage library to manage accessing and storing the ppm images.
+
+To stack your own ppm images
+
 # Results
 
 |Starting Images (with suspiciously uniform noise)|After Image Stacking|

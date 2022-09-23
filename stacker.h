@@ -38,7 +38,7 @@ class stacker {
  * @post output is updates
  * 
  */
-  Void stack();
+  void stack();
 
 /**
  * reads a ppm image file from disk and adds it to the images vector
