@@ -50,7 +50,7 @@ void cPPMImage::readFromFile(const std::string& sPathToFile)
 
 void cPPMImage::writeToFile(const std::string& sPathToFile)
 {
-  //initialize file stream, counter helps us place the newline after each column... or row... however you wanna look at it.
+  //initialize file stream, counter helps us place the newline after each column... or row... however you want to look at it.
   ofstream file;
   int counter = 1;
   file.open(sPathToFile);
@@ -85,7 +85,7 @@ void cPPMImage::createImage(int width, int height, std::string magicNum, int max
 {
   iWidth = width;
   iHeight = height;
-  sMagicNumber = magicNum; // once again cPPMImage only knows 1 magic number, probably dont need the code to change it.
+  sMagicNumber = magicNum; // once again cPPMImage only knows 1 magic number, probably shouldn't have code to change it.
   iMaxColorValue = maxColorValue;
   for(int i = 0; i < (iWidth * iHeight); i ++) {
     strPixel pix;
