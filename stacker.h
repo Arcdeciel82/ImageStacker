@@ -1,3 +1,12 @@
+/**
+ * @file stacker.h
+ * @author Curt Lynch
+ * @date 2022-09-22
+ * @brief stacker definition
+ * 
+ * stacks multiple images together to help reduce noise
+ */
+
 #ifndef STACKER_H
 #define STACKER_H
 

@@ -1,3 +1,12 @@
+/**
+ * @file main.cpp
+ * @author Curt Lynch
+ * @date 2022-09-22
+ * @brief testing image stacker
+ * 
+ * testing the stacking ability of stacker using several different ppms
+ */
+
 #include <iostream>
 #include <iomanip>
 #include <string>

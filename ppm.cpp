@@ -1,3 +1,12 @@
+/**
+ * @file ppm.cpp
+ * @author Curt Lynch
+ * @date 2022-09-22
+ * @brief cPPMImage implementation
+ * 
+ * defining cPPMImage methods
+ */
+
 #include "ppm.h"
 
 #include <fstream>

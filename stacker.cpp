@@ -1,3 +1,12 @@
+/**
+ * @file stacker.cpp
+ * @author Curt Lynch
+ * @date 2022-09-22
+ * @brief stacker implementation
+ * 
+ * a longer way of saying stacker implemenmtation
+ */
+
 #include "stacker.h"
 #include <iostream>
 
