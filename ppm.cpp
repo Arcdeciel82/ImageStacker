@@ -24,7 +24,8 @@ cPPMImage::cPPMImage()
   iMaxColorValue = 255;
 }
 
-cPPMImage::cPPMImage(const std::string& sPathToFile) : cPPMImage()
+cPPMImage::cPPMImage(const std::string& sPathToFile)
+: cPPMImage()
 {
   readFromFile(sPathToFile);
 }
@@ -35,21 +36,25 @@ void cPPMImage::readFromFile(const std::string& sPathToFile)
   ifstream file;
   strPixel pix;
   int r, g, b;
-  this->sPathToFile = sPathToFile;
   file.open(sPathToFile);
 
   // Read data
-  if (file) {
+  if (file)
+  {
   file >> sMagicNumber >> iWidth >> iHeight >> iMaxColorValue;
-  } else if (!file) {
+  } else if (!file)
+  {
     cerr << "cPPMImage: input file stream breaks before pixel data can be read.\n";
     return;
   }
-  for (int i = 0; i < (iWidth * iHeight); i++) {
+  for (int i = 0; i < (iWidth * iHeight); i++)
+  {
+    // updates pix with each pixels data then stores a copy in vecData.
     file >> r >> g >> b;
     pix = {r, g, b};
     vecData.push_back(pix);
-    if(!file) {
+    if(!file)
+    {
       cerr << "cPPMImage: input file stream breaks before reading all pixel data.\n";
       return;
     }
@@ -65,14 +70,17 @@ void cPPMImage::writeToFile(const std::string& sPathToFile)
   file.open(sPathToFile);
 
   file << sMagicNumber << "\n" << iWidth  << " " << iHeight << "\n" << iMaxColorValue << "\n";
-  for(auto& pix : vecData) {
+  for(auto& pix : vecData)
+  {
     // I might as well make the human readable image format human readable. Probably uses /way/ more disk space.
     file << setw(3) << pix.r  << " " << setw(3) << pix.g << " " << setw(3) << pix.b;
     // Logic for whether to add a newline or tab.
-    if (counter == iWidth) {
+    if (counter == iWidth)
+    {
       file << "\n";
       counter = 1;
-    } else {
+    } else
+    {
       file << "\t\t";
       counter++;
     }
@@ -96,7 +104,8 @@ void cPPMImage::createImage(int width, int height, std::string magicNum, int max
   iHeight = height;
   sMagicNumber = magicNum; // once again cPPMImage only knows 1 magic number, probably shouldn't have code to change it.
   iMaxColorValue = maxColorValue;
-  for(int i = 0; i < (iWidth * iHeight); i ++) {
+  for(int i = 0; i < (iWidth * iHeight); i ++)
+  {
     strPixel pix;
     vecData.push_back(pix);
   }

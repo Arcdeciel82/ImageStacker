@@ -13,7 +13,20 @@ then average the color values of each pixel together and output a new image.
 
 Stacker uses the included cPPMImage library to manage accessing and storing the ppm images.
 
-To stack your own ppm images
+To stack your own ppm images simply include stacker.h and add the ppm images using relative paths.
+
+```cpp
+stacker stack1;
+stack1.addImage(std::string sPathToInputFile);
+```
+
+When all images have been added to stacker, process the output by calling the stack method.  
+Follow with the writeToFile method to create a new ppm image on disk.  
+
+```cpp
+stack1.stack();
+stack1.writeToFile(std::string sPathToOutputFile);
+```
 
 # Results
 

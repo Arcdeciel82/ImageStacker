@@ -14,7 +14,8 @@
 #include <vector>
 #include <string>
 
-class stacker {
+class stacker
+{
   private:
   std::vector<cPPMImage> images;
   cPPMImage output;

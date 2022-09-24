@@ -66,7 +66,8 @@ void stacker::stack()
         b += img.at(x,y).b;
       }
       // compute the avg 
-      // Does averaging the data have downsides? Seems like it would produce an overall more 'dull' image.
+      // Does averaging the color data have downsides? 
+      //Seems like it would produce an overall more 'dull' image, with less range.
       r /= images.size();
       g /= images.size();
       b /= images.size();

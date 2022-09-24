@@ -20,7 +20,8 @@
  * @brief one single pixel
  *
  */
-struct strPixel {
+struct strPixel
+{
     int r = 0;
     int g = 0;
     int b = 0;
@@ -34,13 +35,13 @@ struct strPixel {
  * @brief ppm image class
  *
  */
-class cPPMImage {
+class cPPMImage
+{
     private:
     int iWidth;
     int iHeight;
     int iMaxColorValue;
     std::string sMagicNumber;
-    std::string sPathToFile;
     std::vector<strPixel> vecData;
 
     public:
